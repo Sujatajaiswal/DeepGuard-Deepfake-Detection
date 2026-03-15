@@ -1,52 +1,66 @@
 ### DeepGuard – Multimodal Deepfake Detection System
 Overview
 
-DeepGuard is a multimodal deepfake detection system that determines whether a video is real or fake by analyzing both visual (video) and audio signals.
+DeepGuard is a multimodal deepfake detection system designed to determine whether a video is real or fake by analyzing both visual (video) and audio signals.
 
-Modern deepfakes manipulate not only faces but also voices. To address this, DeepGuard processes both modalities in parallel, increasing detection accuracy and robustness.
+Modern deepfake technologies manipulate not only facial expressions but also clone human voices. To address this challenge, DeepGuard processes both modalities in parallel, improving detection accuracy and robustness compared to single-modality systems.
 
- Tech Stack
- Frontend :Next.js, React.js,Tailwind CSS
+Tech Stack
+Frontend
 
-Backend:Python, FastAPI,Flask
+Next.js
 
-Deep Learning & Processing :PyTorch
+React.js
 
-OpenCV : Video Processing
+Tailwind CSS
 
-Librosa : Audio Processing
+Backend
 
-Scikit-learn
+Python
 
- Video Processing Pipeline
+FastAPI
 
-Video frames are extracted using OpenCV
+Flask
 
-Faces are detected and cropped to reduce background noise
+Deep Learning and Processing
 
-Spatial feature extraction using:
+PyTorch
+
+OpenCV – Video processing
+
+Librosa – Audio processing
+
+Scikit-learn – Ensemble learning
+
+Video Processing Pipeline
+
+Video frames are extracted using OpenCV.
+
+Faces are detected and cropped from each frame to reduce background noise.
+
+Spatial feature extraction is performed using CNN models:
 
 ResNet50
 
 EfficientNet-B0
 
-Temporal inconsistency detection using LSTM
+Temporal inconsistencies are analyzed using an LSTM model to detect:
 
-Detects unnatural blinking
+Unnatural blinking
 
 Lip-sync mismatches
 
-Frame-level artifacts
+Frame-level visual artifacts
 
-Outputs a Video Authenticity Score
+This pipeline produces a Video Authenticity Score.
 
 Audio Processing Pipeline
 
-Audio extracted from video
+Audio is extracted from the uploaded video.
 
-MFCC features generated using Librosa
+MFCC (Mel-Frequency Cepstral Coefficients) features are generated using Librosa.
 
-CRNN model analyzes:
+A CRNN model analyzes the audio to detect:
 
 Voice cloning artifacts
 
@@ -54,50 +68,28 @@ Frequency inconsistencies
 
 Synthetic speech patterns
 
-Outputs an Audio Authenticity Score
+This pipeline generates an Audio Authenticity Score.
 
 Fusion Strategy
 
-DeepGuard uses a Late Fusion (Stacking Ensemble) approach:
+DeepGuard uses a Late Fusion (Stacking Ensemble) approach to combine predictions from both pipelines.
 
-Combines audio & video predictions
+Audio and video prediction scores are combined.
 
-Uses Logistic Regression as meta-learner
+Logistic Regression is used as a meta-learner.
 
-Improves robustness when only one modality is manipulated
+This approach improves robustness even if only one modality is manipulated.
 
 Key Features
 
-Multimodal Detection (Audio + Video)
+Multimodal deepfake detection using audio and video
 
-CNN + LSTM for spatial-temporal learning
+CNN + LSTM architecture for spatial-temporal video analysis
 
-CRNN for voice anomaly detection
+CRNN model for detecting synthetic or cloned voices
 
-Ensemble-based final decision
+Ensemble-based final decision using stacking
 
-Modern UI with Next.js
+Modern web interface built with Next.js and React
 
-Scalable API backend
-
-Why DeepGuard?
-
-✔ Handles both face manipulation and voice cloning
-✔ More robust than single-modality systems
-✔ Designed for real-world deepfake detection use cases
-
-Future Improvements
-
-Transformer-based architecture
-
-Real-time streaming detection
-
-Larger dataset training
-
-Model optimization for deployment
-
-👩‍💻 Author
-
-Sujata Jaiswal
-Information Science & Engineering
-Deep Learning & Full Stack Developer
+Scalable backend APIs using FastAPI and Flask
