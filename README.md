@@ -1,5 +1,5 @@
-🛡️ DeepGuard – Multimodal Deepfake Detection System
-📌 Overview
+### DeepGuard – Multimodal Deepfake Detection System
+Overview
 
 DeepGuard is a multimodal deepfake detection system that determines whether a video is real or fake by analyzing both visual (video) and audio signals.
 
