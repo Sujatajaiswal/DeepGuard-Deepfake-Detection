@@ -5,34 +5,20 @@ DeepGuard is a multimodal deepfake detection system that determines whether a vi
 
 Modern deepfakes manipulate not only faces but also voices. To address this, DeepGuard processes both modalities in parallel, increasing detection accuracy and robustness.
 
-🚀 Tech Stack
-💻 Frontend
+ Tech Stack
+ Frontend :Next.js, React.js,Tailwind CSS
 
-Next.js
+Backend:Python, FastAPI,Flask
 
-React.js
+Deep Learning & Processing :PyTorch
 
-Tailwind CSS
+OpenCV : Video Processing
 
-🧠 Backend
-
-Python
-
-FastAPI
-
-Flask
-
-🤖 Deep Learning & Processing
-
-PyTorch
-
-OpenCV
-
-Librosa
+Librosa : Audio Processing
 
 Scikit-learn
 
-🎥 Video Processing Pipeline
+ Video Processing Pipeline
 
 Video frames are extracted using OpenCV
 
@@ -54,7 +40,7 @@ Frame-level artifacts
 
 Outputs a Video Authenticity Score
 
-🎙️ Audio Processing Pipeline
+Audio Processing Pipeline
 
 Audio extracted from video
 
@@ -70,7 +56,7 @@ Synthetic speech patterns
 
 Outputs an Audio Authenticity Score
 
-🔗 Fusion Strategy
+Fusion Strategy
 
 DeepGuard uses a Late Fusion (Stacking Ensemble) approach:
 
@@ -80,7 +66,7 @@ Uses Logistic Regression as meta-learner
 
 Improves robustness when only one modality is manipulated
 
-🎯 Key Features
+Key Features
 
 Multimodal Detection (Audio + Video)
 
@@ -94,13 +80,13 @@ Modern UI with Next.js
 
 Scalable API backend
 
-📊 Why DeepGuard?
+Why DeepGuard?
 
 ✔ Handles both face manipulation and voice cloning
 ✔ More robust than single-modality systems
 ✔ Designed for real-world deepfake detection use cases
 
-🔮 Future Improvements
+Future Improvements
 
 Transformer-based architecture
 
